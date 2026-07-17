@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&display=swap');
+
+:root {
+    --primary: #e11a22;
+    --secondary: #ffeb00;
+    --accent: #0055a4;
+    --bg-light: #f8fafc;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--bg-light);
+    color: #1e293b;
+    padding: 2rem;
+}
+
+.header-produk {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.header-produk h2 {
+    font-size: 2rem;
+    color: var(--primary);
+    font-weight: 800;
+}
+
+.btn-tambah {
+    background: var(--primary);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s;
+}
+
+.btn-tambah:hover {
+    background: #c0141b;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(225, 26, 34, 0.2);
+}
+
+.table-container {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 24px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 1000px;
+}
+
+th {
+    background: #f1f5f9;
+    padding: 1.2rem 1rem;
+    text-align: left;
+    font-weight: 700;
+    color: #64748b;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+td {
+    padding: 1.2rem 1rem;
+    border-bottom: 1px solid #f1f5f9;
+    font-size: 0.95rem;
+}
+
+tr:hover {
+    background: #fafafa;
+}
+
+.badge-stok {
+    padding: 0.4rem 0.8rem;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.8rem;
+}
+
+.stok-aman { background: #dcfce7; color: #15803d; }
+.stok-kritis { background: #fee2e2; color: #ef4444; }
+
+.btn-edit { color: var(--accent); margin-right: 10px; cursor: pointer; }
+.btn-hapus { color: var(--primary); cursor: pointer; }
+
+/* Form Styles */
+.form-card {
+    background: white;
+    padding: 3rem;
+    border-radius: 24px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #64748b;
+    font-size: 0.9rem;
+}
+
+.form-group input, .form-group select, .form-group textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 2px solid #f1f5f9;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s;
+}
+
+.form-group input:focus, .form-group select:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(225, 26, 34, 0.1);
+}
+
+.form-footer {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.btn-batal {
+    background: #f1f5f9;
+    color: #64748b;
+    padding: 0.8rem 1.5rem;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.3s;
+}
+
+.btn-simpan {
+    background: var(--primary);
+    color: white;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-simpan:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(225, 26, 34, 0.2);
+}
+
+@media (max-width: 768px) {
+    body { padding: 1rem; }
+    .header-produk { flex-direction: column; align-items: flex-start; gap: 1rem; }
+    .form-grid { grid-template-columns: 1fr; }
+    .form-card { padding: 1.5rem; }
+}
